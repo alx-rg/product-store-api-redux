@@ -1,22 +1,30 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
+import ItemList from './components/ItemList/ItemList';
+import ItemDetails from './components/ItemDetails/ItemDetails';
+
 
 function App() {
   return (
     <div className="App">
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/"  element={ItemList} />
+          <Route path="/item/:productId" component={ItemDetails} />
+          <Route>Oh shucks...404 Item Not Found!</Route>
+        </Routes>
+      </Router>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>BUY IT</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Simple Shopping Store using React Redux and a shopping API!! 
+<hr></hr>
+          A Shopping Store
+
+
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
