@@ -12,7 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/"  element={ItemList} />
-          <Route path="/item/:productId" component={ItemDetails} />
+          <Route path="/item/:itemId" component={ItemDetails} />
           <Route>Oh shucks...404 Item Not Found!</Route>
         </Routes>
       </Router>
@@ -20,7 +20,7 @@ function App() {
         <h1>BUY IT</h1>
         <p>
           Simple Shopping Store using React Redux and a shopping API!! 
-<hr></hr>
+          <hr></hr>
           A Shopping Store
 
 
