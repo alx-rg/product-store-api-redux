@@ -11,21 +11,12 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/"  element={ItemList} />
-          <Route path="/item/:itemId" component={ItemDetails} />
+          <Route path="/" element={<ItemList />} />
+          <Route path="/item/:itemId" element={<ItemDetails />} />
+          {/* <Route path=":itemId" element={<ItemDetails />} /> */}
           <Route>Oh shucks...404 Item Not Found!</Route>
         </Routes>
       </Router>
-      <header className="App-header">
-        <h1>BUY IT</h1>
-        <p>
-          Simple Shopping Store using React Redux and a shopping API!! 
-          <hr></hr>
-          A Shopping Store
-
-
-        </p>
-      </header>
     </div>
   );
 }

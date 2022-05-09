@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ItemComponent from "../ItemComponent/ItemComponent";
 import { useDispatch } from "react-redux";
-import { setItems } from "../redux/actions/itemsActions";
+import { setItems } from "../../redux/actions/itemsActions";
 import axios from "axios";
 
 
@@ -15,15 +15,20 @@ const ItemList = () => {
       });
     dispatch(setItems(response.data));
   };
-  
+
   useEffect(() => {
     fetchItems();
   }, []);
 
   return (
+    <div className="ui container center">
+      <br></br>
+      <br></br>
+    <h1>Products</h1>
     <div className="ui grid container">
       <ItemComponent />
     </div>
+  </div>
   )
 }
 
