@@ -14,7 +14,6 @@ function App() {
           <Route path="/" element={<ItemList />} />
           <Route path="/item/:itemId" element={<ItemDetails />} />
           {/* <Route path=":itemId" element={<ItemDetails />} /> */}
-          <Route>Oh shucks...404 Item Not Found!</Route>
         </Routes>
       </Router>
     </div>

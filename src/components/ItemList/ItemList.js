@@ -3,6 +3,7 @@ import ItemComponent from "../ItemComponent/ItemComponent";
 import { useDispatch } from "react-redux";
 import { setItems } from "../../redux/actions/itemsActions";
 import axios from "axios";
+import { Container, Grid, Paper } from "@mui/material";
 
 
 const ItemList = () => {
@@ -21,14 +22,12 @@ const ItemList = () => {
   }, []);
 
   return (
-    <div className="ui container center">
-      <br></br>
-      <br></br>
-    <h1>Products</h1>
-    <div className="ui grid container">
-      <ItemComponent />
-    </div>
-  </div>
+    <Container>
+      <h1>Products</h1>
+      <Grid container>
+          <ItemComponent />
+      </Grid>
+    </Container>
   )
 }
 

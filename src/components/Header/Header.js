@@ -1,20 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Header/Header.css"
+import { Typography, AppBar, Toolbar, IconButton } from "@mui/material";
+import SearchIcon from "@mui/icons-material/ThumbUpAlt"
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 
 const Header = () => {
   return (
-    <div className="ui fixed menu">
-      <div className="ui container center">
-        <Link to={`/`}>
-        <h1>AchèteLeTruc /</h1>
-        </Link>
-        <Link to={`/`}>
-        <h1 className="Cart"> View Cart </h1>
-        </Link>
-      </div>
-    </div>
+    <AppBar color="primary">
+      <Toolbar>
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+        <Typography >
+          <Link to={`/`}>
+          <h2>AchèteLeTruc</h2>
+          </Link>
+        </Typography>
+      </Toolbar>
+    </AppBar>
   )
 };
 
